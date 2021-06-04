@@ -1,0 +1,87 @@
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab1-stoplight_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/clock.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity clock
+# -- Compiling architecture eqn of clock
+# vcom -93 -work work {C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/stoplight_fsm.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity stoplight_fsm
+# -- Compiling architecture stoplight of stoplight_fsm
+# vcom -93 -work work {C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/components.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package components
+# vcom -93 -work work {C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/main.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package components
+# -- Compiling entity main
+# -- Compiling architecture behaviour of main
+# 
+vsim work.main
+# vsim work.main 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.components
+# Loading work.main(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.clock(eqn)
+# Loading work.stoplight_fsm(stoplight)
+wave create -driver freeze -pattern clock -initialvalue U -period 10ns -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/main/clk
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/main/reset
+wave modify -driver freeze -pattern clock -initialvalue 1 -period 10ns -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/main/clk
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/main/start
+wave modify -driver freeze -pattern constant -value 1 -starttime 100ns -endtime 200ns Edit:/main/start
+add wave -position insertpoint  \
+sim:/main/RED
+add wave -position insertpoint  \
+sim:/main/YELLOW
+add wave -position insertpoint  \
+sim:/main/GREEN
+run
+restart
+run
+run
+restart
+run
+add wave -position insertpoint  \
+sim:/main/DONE
+restart
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 190ns -endtime 200ns Edit:/main/start
+wave modify -driver freeze -pattern constant -value 1 -starttime 90ns -endtime 200ns Edit:/main/start
+restart
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 50ns Edit:/main/reset
+restart
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 90ns -endtime 190ns Edit:/main/start
+wave modify -driver freeze -pattern constant -value 0 -starttime 190ns -endtime 1000ns Edit:/main/start
+wave modify -driver freeze -pattern constant -value 1 -starttime 190ns -endtime 195ns Edit:/main/start
+restart
+run

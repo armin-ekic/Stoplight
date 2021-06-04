@@ -1,0 +1,135 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\tyspa\OneDrive\Spring 2020\ECE475\Lab 1 Stoplight\simulation\modelsim
+Eclock
+Z1 w1580483135
+Z2 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\tyspa\OneDrive\Spring 2020\ECE475\Lab 1 Stoplight\simulation\modelsim
+Z7 8C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/clock.vhd
+Z8 FC:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/clock.vhd
+l0
+L14
+VAz^`eNXATTY88lgX2R>9`1
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1580483186.262000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/clock.vhd|
+Z12 !s107 C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/clock.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 T[=7f6Vn7Q5g>GNlZcI`f1
+!i10b 1
+Aeqn
+R2
+R3
+R4
+R5
+DEx4 work 5 clock 0 22 Az^`eNXATTY88lgX2R>9`1
+l31
+L24
+VEUBO3RAbh2>1^7fnb9T;S3
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 DKj>77?4K8jW1EB54N6541
+!i10b 1
+Pcomponents
+R4
+R5
+w1580481070
+R6
+8C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/components.vhd
+FC:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/components.vhd
+l0
+L4
+VJkG0aOR:X_NS_F`3[A@Z93
+R9
+31
+R13
+R14
+!s100 gf9VJ8HGVaa<NZ9>33S3X0
+!i10b 1
+!s108 1580483186.955000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/components.vhd|
+!s107 C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/components.vhd|
+Emain
+Z15 w1580481048
+Z16 DPx4 work 10 components 0 22 JkG0aOR:X_NS_F`3[A@Z93
+R4
+R5
+R6
+Z17 8C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/main.vhd
+Z18 FC:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/main.vhd
+l0
+L7
+V_j0jZS^DHhXPiF1FJEW?M3
+!s100 ezf5k>_P;2fQ=19CzXcNU2
+R9
+31
+!i10b 1
+Z19 !s108 1580483187.260000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/main.vhd|
+Z21 !s107 C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/main.vhd|
+R13
+R14
+Abehaviour
+R16
+R4
+R5
+DEx4 work 4 main 0 22 _j0jZS^DHhXPiF1FJEW?M3
+l15
+L12
+VF1JL@T_al[D<jGBIaSUhJ1
+!s100 @P_WOLgjD7IR3OY9ShPUD1
+R9
+31
+!i10b 1
+R19
+R20
+R21
+R13
+R14
+Estoplight_fsm
+Z22 w1580482381
+R4
+R5
+R6
+Z23 8C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/stoplight_fsm.vhd
+Z24 FC:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/stoplight_fsm.vhd
+l0
+L4
+V32`IVQ??H?j>k@c2X;SXX1
+R9
+31
+Z25 !s108 1580483186.589000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/stoplight_fsm.vhd|
+Z27 !s107 C:/Users/tyspa/OneDrive/Spring 2020/ECE475/Lab 1 Stoplight/stoplight_fsm.vhd|
+R13
+R14
+!s100 U;kLHF`0?[gmPoJAa9MgU1
+!i10b 1
+Astoplight
+R4
+R5
+DEx4 work 13 stoplight_fsm 0 22 32`IVQ??H?j>k@c2X;SXX1
+l11
+L9
+VZHUXDYa[k>^^7V@fNn]TC0
+R9
+31
+R25
+R26
+R27
+R13
+R14
+!s100 4<7j99N8>J>]701`n>a7G2
+!i10b 1

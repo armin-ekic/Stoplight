@@ -1,0 +1,42 @@
+Library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity ECE475_Lab1 is 
+	port(restart, start, clk: in std_logic;
+		RYG: out std_logic_vector(2 downto 0));
+end ECE475_Lab1;
+
+architecture stoplight of ECE475_Lab1 is
+	signal state, ns: integer range 0 to 3 :=0;
+begin
+	process(restart, start, clk)
+	begin
+		case state is
+		when 0 =>
+			if start = '0' or restart = '1' then RYG <= "100"; ns <= 0;
+			elsif restart = '0' and start = '1' then RYG <= "100"; ns <= 1; --could i just put else here instead of the elseif and conditions?
+			end if;
+		when 1 =>
+			if restart = '1' then RYG <= "100"; ns <= 0;
+			elsif restart = '0' and clk = '0' then RYG <= "100"; ns <= 1;
+			elsif restart = '0' and clk = '1' then RYG <= "010"; ns <= 2; --same question as above
+			end if;
+		when 2 =>
+			if restart = '1' then RYG <= "100"; ns <= 0;
+			elsif restart = '0' and clk = '0' then RYG <= "010"; ns <= 2; 
+			elsif restart = '0' and clk = '1' then RYG <= "001"; ns <= 3; --same question as above
+			end if;
+		when 3 =>
+			if restart = '1' then RYG <= "100"; ns <= 0;
+			elsif restart = '0' and clk = '0' then RYG <= "001"; ns <= 3;
+			elsif clk = '1' then RYG <= "100"; ns <= 0; --same question as above
+			end if;
+		end case;
+	end process;
+	
+	process(clk)
+	begin
+		if clk'event and clk = '1' then state <= ns;
+		end if;
+	end process;
+end stoplight;

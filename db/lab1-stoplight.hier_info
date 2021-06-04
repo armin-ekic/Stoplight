@@ -1,0 +1,65 @@
+|main
+clk => clock:clk_component.CLK
+clk => stoplight_fsm:fsm.clk
+reset => clock:clk_component.RST
+reset => stoplight_fsm:fsm.restart
+start => clock:clk_component.START
+start => stoplight_fsm:fsm.start
+RED <= stoplight_fsm:fsm.RED
+YELLOW <= stoplight_fsm:fsm.YELLOW
+GREEN <= stoplight_fsm:fsm.GREEN
+
+
+|main|clock:clk_component
+CLK => WAIT_TIME[1].IN1
+CLK => Q[0].IN1
+CLK => running.IN1
+CLK => pulse.LATCH_ENABLE
+CLK => running.ENA
+RST => WAIT_TIME[1].IN1
+RST => Q[0].OUTPUTSELECT
+RST => Q[0].IN1
+RST => Q[1].OUTPUTSELECT
+RST => Q[2].OUTPUTSELECT
+RST => Q[3].OUTPUTSELECT
+RST => Q[4].OUTPUTSELECT
+RST => Q[5].OUTPUTSELECT
+RST => Q[6].OUTPUTSELECT
+RST => Q[7].OUTPUTSELECT
+RST => Q[8].OUTPUTSELECT
+RST => Q[9].OUTPUTSELECT
+RST => Q[10].OUTPUTSELECT
+RST => Q[11].OUTPUTSELECT
+RST => Q[12].OUTPUTSELECT
+RST => Q[13].OUTPUTSELECT
+RST => Q[14].OUTPUTSELECT
+RST => Q[15].OUTPUTSELECT
+RST => Q[16].OUTPUTSELECT
+RST => Q[17].OUTPUTSELECT
+RST => Q[18].OUTPUTSELECT
+RST => Q[19].OUTPUTSELECT
+RST => Q[20].OUTPUTSELECT
+RST => Q[21].OUTPUTSELECT
+RST => Q[22].OUTPUTSELECT
+RST => Q[23].OUTPUTSELECT
+RST => Q[24].OUTPUTSELECT
+RST => running.IN1
+START => running.CLK
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|stoplight_fsm:fsm
+restart => process_0.IN0
+restart => ns[1].IN1
+restart => process_0.IN0
+restart => process_0.IN0
+start => process_0.IN1
+clk => state[0].CLK
+clk => state[1].CLK
+T => process_0.IN1
+T => process_0.IN1
+RED <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+YELLOW <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+GREEN <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+

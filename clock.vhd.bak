@@ -1,0 +1,336 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- PROGRAM		"Quartus II 64-Bit"
+-- VERSION		"Version 13.0.0 Build 156 04/24/2013 SJ Web Edition"
+-- CREATED		"Fri Jan 24 08:41:14 2020"
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work;
+
+ENTITY clock IS 
+	PORT
+	(
+		CLK :  IN  STD_LOGIC;
+		RST :  IN  STD_LOGIC;
+		CLKL :  OUT  STD_LOGIC
+	);
+END clock;
+
+ARCHITECTURE bdf_type OF clock IS 
+
+SIGNAL	SYNTHESIZED_WIRE_57 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_58 :  STD_LOGIC;
+SIGNAL	TFF_9 :  STD_LOGIC;
+SIGNAL	TFF_10 :  STD_LOGIC;
+SIGNAL	TFF_11 :  STD_LOGIC;
+SIGNAL	TFF_12 :  STD_LOGIC;
+SIGNAL	TFF_13 :  STD_LOGIC;
+SIGNAL	TFF_14 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_59 :  STD_LOGIC;
+SIGNAL	TFF_21 :  STD_LOGIC;
+SIGNAL	TFF_18 :  STD_LOGIC;
+SIGNAL	TFF_19 :  STD_LOGIC;
+SIGNAL	TFF_20 :  STD_LOGIC;
+SIGNAL	TFF_24 :  STD_LOGIC;
+SIGNAL	TFF_17 :  STD_LOGIC;
+SIGNAL	TFF_16 :  STD_LOGIC;
+SIGNAL	TFF_22 :  STD_LOGIC;
+SIGNAL	TFF_15 :  STD_LOGIC;
+SIGNAL	TFF_inst7 :  STD_LOGIC;
+SIGNAL	TFF_inst5 :  STD_LOGIC;
+SIGNAL	TFF_inst6 :  STD_LOGIC;
+
+
+BEGIN 
+SYNTHESIZED_WIRE_57 <= '1';
+SYNTHESIZED_WIRE_59 <= '1';
+
+
+
+PROCESS(TFF_9,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_10_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_10_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_10_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_9)) THEN
+	TFF_10_synthesized_var := TFF_10_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_10 <= TFF_10_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_10,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_11_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_11_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_11_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_10)) THEN
+	TFF_11_synthesized_var := TFF_11_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_11 <= TFF_11_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_11,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_12_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_12_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_12_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_11)) THEN
+	TFF_12_synthesized_var := TFF_12_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_12 <= TFF_12_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_12,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_13_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_13_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_13_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_12)) THEN
+	TFF_13_synthesized_var := TFF_13_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_13 <= TFF_13_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_13,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_14_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_14_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_14_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_13)) THEN
+	TFF_14_synthesized_var := TFF_14_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_14 <= TFF_14_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_14,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_15_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_15_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_15_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_14)) THEN
+	TFF_15_synthesized_var := TFF_15_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_15 <= TFF_15_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_21,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_16_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_16_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_16_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_21)) THEN
+	TFF_16_synthesized_var := TFF_16_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_16 <= TFF_16_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_18,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_17_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_17_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_17_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_18)) THEN
+	TFF_17_synthesized_var := TFF_17_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_17 <= TFF_17_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_19,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_18_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_18_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_18_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_19)) THEN
+	TFF_18_synthesized_var := TFF_18_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_18 <= TFF_18_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_20,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_19_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_19_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_19_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_20)) THEN
+	TFF_19_synthesized_var := TFF_19_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_19 <= TFF_19_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_24,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_20_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_20_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_20_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_24)) THEN
+	TFF_20_synthesized_var := TFF_20_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_20 <= TFF_20_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_17,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_21_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_21_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_21_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_17)) THEN
+	TFF_21_synthesized_var := TFF_21_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_21 <= TFF_21_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_16,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_22_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_22_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_22_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_16)) THEN
+	TFF_22_synthesized_var := TFF_22_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_22 <= TFF_22_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_22,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE CLKL_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	CLKL_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	CLKL_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_22)) THEN
+	CLKL_synthesized_var := CLKL_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	CLKL <= CLKL_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_15,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_59)
+VARIABLE TFF_24_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_24_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_59 = '0') THEN
+	TFF_24_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_15)) THEN
+	TFF_24_synthesized_var := TFF_24_synthesized_var XOR SYNTHESIZED_WIRE_59;
+END IF;
+	TFF_24 <= TFF_24_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_inst7,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_9_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_9_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_9_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_inst7)) THEN
+	TFF_9_synthesized_var := TFF_9_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_9 <= TFF_9_synthesized_var;
+END PROCESS;
+
+
+SYNTHESIZED_WIRE_58 <= NOT(RST);
+
+
+
+
+PROCESS(CLK,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_inst5_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_inst5_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_inst5_synthesized_var := '1';
+ELSIF (RISING_EDGE(CLK)) THEN
+	TFF_inst5_synthesized_var := TFF_inst5_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_inst5 <= TFF_inst5_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_inst5,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_inst6_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_inst6_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_inst6_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_inst5)) THEN
+	TFF_inst6_synthesized_var := TFF_inst6_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_inst6 <= TFF_inst6_synthesized_var;
+END PROCESS;
+
+
+PROCESS(TFF_inst6,SYNTHESIZED_WIRE_58,SYNTHESIZED_WIRE_57)
+VARIABLE TFF_inst7_synthesized_var : STD_LOGIC;
+BEGIN
+IF (SYNTHESIZED_WIRE_58 = '0') THEN
+	TFF_inst7_synthesized_var := '0';
+ELSIF (SYNTHESIZED_WIRE_57 = '0') THEN
+	TFF_inst7_synthesized_var := '1';
+ELSIF (RISING_EDGE(TFF_inst6)) THEN
+	TFF_inst7_synthesized_var := TFF_inst7_synthesized_var XOR SYNTHESIZED_WIRE_57;
+END IF;
+	TFF_inst7 <= TFF_inst7_synthesized_var;
+END PROCESS;
+
+
+
+END bdf_type;

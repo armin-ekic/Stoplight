@@ -1,0 +1,17 @@
+--LAB 1
+
+library ieee;
+use ieee.std_logic_1164.all;
+use work.components.all;
+
+entity main is
+	port(clock, reset, start : in std_logic;
+	RED, YELLOW, GREEN : out std_logic);
+end main;
+
+architecture behaviour of main is
+	signal DONE : std_logic;
+	
+	begin
+	
+	
